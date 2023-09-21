@@ -17,6 +17,12 @@ const Header = () => {
             <Link href="/repos" className="text-gray-300 hover:text-white mr-4">
               Repos
             </Link>
+            <Link
+              href="/courses"
+              className="text-gray-300 hover:text-white mr-4"
+            >
+              Courses
+            </Link>
           </div>
 
           <div className="flex items-center font-bold">
@@ -27,13 +33,13 @@ const Header = () => {
                   href="/sign-in"
                   className="text-gray-300 hover:text-white mr-4"
                 >
-                  Sign In
+                  로그인
                 </Link>
                 <Link
                   href="/sign-up"
                   className="text-gray-300 hover:text-white mr-4"
                 >
-                  Sign Up
+                  로그아웃
                 </Link>
               </>
             ) : (
@@ -42,13 +48,13 @@ const Header = () => {
                   href="/dashboard"
                   className="text-gray-300 hover:text-white mr-4"
                 >
-                  Dashboard
+                  대시보드
                 </Link>
                 <Link
                   href="/profile"
                   className="text-gray-300 hover:text-white mr-4"
                 >
-                  Profile
+                  마이페이지
                 </Link>
                 <div className="ml-auto">
                   <UserButton afterSignOutUrl="/" />

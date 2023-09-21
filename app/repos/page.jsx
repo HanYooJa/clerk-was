@@ -1,3 +1,4 @@
+import { githubUsername } from '@/constants/constans'
 import Link from 'next/link'
 import React from 'react'
 import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa'
@@ -5,9 +6,9 @@ import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa'
 const username = 'bradtraversy'
 
 async function fetchRepos() {
-  const url = `https://api.github.com/users/${username}/repos`
-  const response = await fetch(url)
-
+  const username = githubUsername
+  // 1. SSG : Static Site Generation
+  const response = await fetch(`https://api.github.com/users/${username}/repos`) // // 2. SSR : Server-Side Rendering // const response = await fetch( //   `https://api.github.com/users/${username}/repos`, //   { cache: 'no-store' } // ) // 3. ISR : Incremental Static Regeneration // const response = await fetch( //   `https://api.github.com/users/${username}/repos`, //   { next: { revalidate: 60 } } // )
   await new Promise((resolve) => setTimeout(resolve, 1000))
 
   const repos = await response.json()
